@@ -48,6 +48,8 @@
     <%= f.label :'Profile Picture:', :class=>"control-label" %>
     <%= f.text_field :photo_url, :class=>"form-control" %>
   </div>
+  <%= f.hidden_field(:photo_url, value: false) %>
+
 
   <%= f.hidden_field(:account_manager, value: false) %>
 
