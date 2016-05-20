@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Summer16</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="build.css">
+
+</head>
+<body>
+  <div class="header-bg"><img src="assets/summer16.jpg" class="home-pg-background">
+</div>
+  <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <div class="navbar-brand">Summer16!</div>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="<%= "active" if current_page == '/' %>"><%= link_to "HOME", root_path %></li>
+        </ul>
+
+        <% if current_user %>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="<%= "active" if current_page == "/users/#{current_user.id}" %>"><%= link_to user_path(current_user.id) do %><span class="glyphicon glyphicon-user"></span> User Profile<% end %></li>
+            <li><%= link_to logout_path, method: "delete" do %><span class="glyphicon glyphicon-log-out"></span> Log Out<% end %></li>
+          </ul>
+        <% else %>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="<%= "active" if current_page == '/users/new' %>"><%= link_to new_user_path do %><span class="glyphicon glyphicon-user"></span> Sign Up<% end %></li>
+            <li class="<%= "active" if current_page == '/login' %>"><%= link_to login_path do %><span class="glyphicon glyphicon-log-in"></span> Log In<% end %></li>
+          </ul>
+        <% end %>
+      </div>
+    </nav>
+    <article class = "container">
+      <%= yield %>
+
+    </article>
+</body>
+</html>

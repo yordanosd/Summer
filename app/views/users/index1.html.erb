@@ -1,0 +1,183 @@
+
+
+ <!-- The classes that can be used are: .active, .success, .info, .warning, and .danger           -->
+ <div class="container">
+   <table class="table table-striped", class="table table-hover">
+     <thead>
+       <tr>
+         <th class="headings" colspan=9>A-TEAM SUMMARY </tr>
+       </tr>
+       <tr class="headings">
+         <th></th>
+         <th></th>
+         <th>A-TEAM</th>
+         <th>Weight for Date</th>
+       </tr>
+     </thead>
+     <tbody>
+       <% @user.each do |user| %>
+        <tr class="row">
+          <td class = "table-userpic">
+            <div class = "userpic">
+              <img src=<%= user.profile_pic %> class="img-responsive" alt="">
+            </div>
+          </td>
+          <td><%= user.username %></td>
+          <td>weight %</td>
+        <% end %>
+      </tr>
+     </tbody>
+   </table>
+ </div>
+
+
+
+ <div class="table-container">
+ 	<table class="table table-filter">
+ 		<tbody>
+      <% @user.each do |user| %>
+ 			<tr data-status="pagado">
+ 				<!-- <td>
+ 					<div class="ckbox">
+ 						<input type="checkbox" id="checkbox1">
+ 						<label for="checkbox1"></label>
+ 					</div>
+ 				</td> -->
+ 				<!-- <td>
+ 					<a href="javascript:;" class="star">
+ 						<i class="glyphicon glyphicon-star"></i>
+ 					</a>
+ 				</td> -->
+ 				<td>
+ 					<div class="media">
+ 						<a href="#" class="pull-left">
+ 							<img src="<%= user.profile_pic %>" class="media-photo">
+ 						</a>
+ 						<div class="media-body">
+ 							<span class="media-meta pull-right">user.username</span>
+ 							<h4 class="title">
+ 								Lorem Impsum
+ 								<span class="pull-right pagado">(Pagado)</span>
+ 							</h4>
+ 							<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+ 						</div>
+ 					</div>
+ 				</td>
+ 			</tr>
+      <% end %>
+
+ 			<tr data-status="pendiente">
+ 				<td>
+ 					<div class="ckbox">
+ 						<input type="checkbox" id="checkbox3">
+ 						<label for="checkbox3"></label>
+ 					</div>
+ 				</td>
+ 				<td>
+ 					<a href="javascript:;" class="star">
+ 						<i class="glyphicon glyphicon-star"></i>
+ 					</a>
+ 				</td>
+ 				<td>
+ 					<div class="media">
+ 						<a href="#" class="pull-left">
+ 							<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+ 						</a>
+ 						<div class="media-body">
+ 							<span class="media-meta pull-right">Febrero 13, 2016</span>
+ 							<h4 class="title">
+ 								Lorem Impsum
+ 								<span class="pull-right pendiente">(Pendiente)</span>
+ 							</h4>
+ 							<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+ 						</div>
+ 					</div>
+ 				</td>
+ 			</tr>
+ 			<tr data-status="cancelado">
+ 				<td>
+ 					<div class="ckbox">
+ 						<input type="checkbox" id="checkbox2">
+ 						<label for="checkbox2"></label>
+ 					</div>
+ 				</td>
+ 				<td>
+ 					<a href="javascript:;" class="star">
+ 						<i class="glyphicon glyphicon-star"></i>
+ 					</a>
+ 				</td>
+ 				<td>
+ 					<div class="media">
+ 						<a href="#" class="pull-left">
+ 							<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+ 						</a>
+ 						<div class="media-body">
+ 							<span class="media-meta pull-right">Febrero 13, 2016</span>
+ 							<h4 class="title">
+ 								Lorem Impsum
+ 								<span class="pull-right cancelado">(Cancelado)</span>
+ 							</h4>
+ 							<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+ 						</div>
+ 					</div>
+ 				</td>
+ 			</tr>
+ 			<tr data-status="pagado" class="selected">
+ 				<td>
+ 					<div class="ckbox">
+ 						<input type="checkbox" id="checkbox4" checked>
+ 						<label for="checkbox4"></label>
+ 					</div>
+ 				</td>
+ 				<td>
+ 					<a href="javascript:;" class="star star-checked">
+ 						<i class="glyphicon glyphicon-star"></i>
+ 					</a>
+ 				</td>
+ 				<td>
+ 					<div class="media">
+ 						<a href="#" class="pull-left">
+ 							<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+ 						</a>
+ 						<div class="media-body">
+ 							<span class="media-meta pull-right">Febrero 13, 2016</span>
+ 							<h4 class="title">
+ 								Lorem Impsum
+ 								<span class="pull-right pagado">(Pagado)</span>
+ 							</h4>
+ 							<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+ 						</div>
+ 					</div>
+ 				</td>
+ 			</tr>
+ 			<tr data-status="pendiente">
+ 				<td>
+ 					<div class="ckbox">
+ 						<input type="checkbox" id="checkbox5">
+ 						<label for="checkbox5"></label>
+ 					</div>
+ 				</td>
+ 				<td>
+ 					<a href="javascript:;" class="star">
+ 						<i class="glyphicon glyphicon-star"></i>
+ 					</a>
+ 				</td>
+ 				<td>
+ 					<div class="media">
+ 						<a href="#" class="pull-left">
+ 							<img src="https://s3.amazonaws.com/uifaces/faces/twitter/fffabs/128.jpg" class="media-photo">
+ 						</a>
+ 						<div class="media-body">
+ 							<span class="media-meta pull-right">Febrero 13, 2016</span>
+ 							<h4 class="title">
+ 								Lorem Impsum
+ 								<span class="pull-right pendiente">(Pendiente)</span>
+ 							</h4>
+ 							<p class="summary">Ut enim ad minim veniam, quis nostrud exercitation...</p>
+ 						</div>
+ 					</div>
+ 				</td>
+ 			</tr>
+ 		</tbody>
+ 	</table>
+ </div>

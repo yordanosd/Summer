@@ -1,0 +1,50 @@
+
+
+ <!-- The classes that can be used are: .active, .success, .info, .warning, and .danger           -->
+
+       <% date = ["May-12", "May-19", "May-26",  "June-02", "June-09"] %>
+       <div class="profile-content">
+         <h3>Weign-in Summary</h2>
+         <table class="table table-striped">
+           <thead>
+
+             <tr class = "header">
+               <th colsapn=2>Ranking </th>
+
+               <th class = "header">User</th>
+               <% date.each do |date| %>
+               <th class = "header">
+                 <%= date %>
+               </th>
+               <% end %>
+             </tr>
+           </thead>
+           <tbody class="table-body">
+             <% @user.each do |user| %>
+             <tr>
+              <td class="ranking"> Ranking </td>
+               <td class="profile-table-pic">
+        					<div class="profile-userpic-all">
+        							<img src="<%= user.profile_pic %>" class="media-photo">
+        						</a>
+        						<div class="media-body">
+        							<span class="title"><%= user.username%></span>
+        						</div>
+        					</div>
+        				</td>
+                 <td> - </td>
+                 <td> <%= user.weights[1] ? number_to_percentage((((user.weights[1].weight - user.weights[0].weight)/user.weights[0].weight) * 100), precision: 2) : ""  %></td>
+                 <td> <%= user.weights[2] ? number_to_percentage((((user.weights[2].weight - user.weights[0].weight)/user.weights[0].weight) * 100), precision: 2) : ""  %></td>
+                 <td> <%= user.weights[3] ? number_to_percentage((((user.weights[3].weight - user.weights[0].weight)/user.weights[0].weight) * 100), precision: 2) : ""  %></td>
+                 <td> <%= user.weights[4] ? number_to_percentage((((user.weights[4].weight - user.weights[0].weight)/user.weights[0].weight) * 100), precision: 2) : ""  %></td>
+
+             </tr>
+             <% end %>
+
+           </tbody>
+         </table>
+       </div>
+
+ 		</div>
+ 	</div>
+ </div>

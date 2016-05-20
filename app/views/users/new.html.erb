@@ -1,0 +1,58 @@
+<% if @user %>
+  <h1>Signup!</h1>
+
+  <%= form_for @user, :html => { :class => "form-horizontal", :class => "form" } do |f| %>
+
+  <!-- ERROR messages-->
+
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2>
+          <%= pluralize(@user.errors.count, "error") %> prohibited user from being saved:
+        </h2>
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+  <!-- USER FORM-->
+  <div class="control-group">
+    <%= f.label :'first_name:', :class=>"control-label" %>
+    <%= f.text_field :first_name, placeholder: "Joe", :class=>"form-control" %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :'Username:', :class=>"control-label" %>
+    <%= f.text_field :username, :class=>"form-control" %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :'email:', :class=>"control-label" %>
+    <%= f.text_field :email, :class=>"form-control" %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :'password:', :class=>"control-label" %>
+    <%= f.password_field :password, :class=>"form-control" %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :'password confirmation:', :class=>"control-label" %>
+    <%= f.password_field :password_confirmation, :class=>"form-control" %>
+  </div>
+
+  <div class="control-group">
+    <%= f.label :'Profile Picture:', :class=>"control-label" %>
+    <%= f.text_field :photo_url, :class=>"form-control" %>
+  </div>
+
+  <%= f.hidden_field(:account_manager, value: false) %>
+
+  <div class="form-actions">
+    <%= f.submit class:'btn btn-success' %>
+  <% end %>
+
+<% end %>

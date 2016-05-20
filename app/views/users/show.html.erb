@@ -1,0 +1,114 @@
+<div class="container">
+  <div class="row profile">
+		<div class="col-md-3">
+			<div class="profile-sidebar">
+				<!-- SIDEBAR USERPIC -->
+				<div class="profile-userpic">
+					<img src=<%= @user.profile_pic %> class="img-responsive" alt="">
+				</div>
+				<!-- END SIDEBAR USERPIC -->
+				<!-- SIDEBAR USER TITLE -->
+				<div class="profile-usertitle">
+					<div class="profile-usertitle-name">
+						<%= @user.username %>
+					</div>
+          <div class="profile-usertitle-name">
+            <%= @user.first_name %>
+          </div>
+					<div class="profile-usertitle-job">
+            <%= @user.email %>
+					</div>
+				</div>
+				<!-- END SIDEBAR BUTTONS -->
+				<!-- SIDEBAR MENU -->
+				<div class="profile-usermenu">
+					<ul class="nav">
+						<li class="active">
+							<a href="#">
+							<i class="glyphicon glyphicon-home"></i>
+							Overview </a>
+						</li>
+            <li class = "link">
+              <%= link_to new_user_weight_path(@user) do%>
+                <i class="glyphicon glyphicon-pencil"></i>
+                New Weigh-in
+              <% end %>
+            </li>
+            <li class = "link">
+              <%= link_to users_path do%>
+                <i class="glyphicon glyphicon-th-list"></i>
+                View TEAM Summary
+              <% end %>
+            </li>
+            <li class = "link">
+              <%= link_to edit_user_path(@user) do%>
+                <i class="glyphicon glyphicon-user"></i>
+                Update Account
+              <% end %>
+            </li>
+					</ul>
+				</div>
+				<!-- END MENU -->
+			</div>
+		</div>
+		<div class="col-md-9">
+      <% date = ["May-12", "May-19", "May-26",  "June-02", "June-09"] %>
+      <div class="profile-content">
+        <h2>Welcome <%= @user.first_name.capitalize %>!</h2>
+        <br>
+        <h3>Weign-in Summary</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr class = "header">
+              <th></th>
+              <% date.each do |date| %>
+              <th>
+                <%= date %>
+              </th>
+              <% end %>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <% count = 5 %>
+              <td class="row_header"><strong>Weight</strong></td>
+              <% @user.weights.each do |weight| %>
+                <td><%= sprintf('%.2f', weight.weight) %>
+                  <% count -= 1 %>
+                  <% end %>
+                </td>
+              <% count.times do %>
+                <td></td>
+                <% end %>
+            </tr>
+
+            <tr>
+              <td class="row_header"><strong>Weekly <br> Loss/Gain</strong></td>
+                <td> - </td>
+                <td> <%= @user.weights[1] ? number_to_percentage((((@user.weights[1].weight - @user.weights[0].weight)/@user.weights[0].weight) * 100), precision: 2) : ""  %></td>
+                <td> <%= @user.weights[2] ? number_to_percentage((((@user.weights[2].weight - @user.weights[1].weight)/@user.weights[1].weight) * 100), precision: 2) : ""  %></td>
+                <td> <%= @user.weights[3] ? number_to_percentage((((@user.weights[3].weight - @user.weights[2].weight)/@user.weights[2].weight) * 100), precision: 2) : ""  %></td>
+                <td> <%= @user.weights[4] ? number_to_percentage((((@user.weights[4].weight - @user.weights[3].weight)/@user.weights[3].weight) * 100), precision: 2) : ""  %></td>
+            </tr>
+
+            <tr>
+              <td class="row_header"><strong>Total <br> Loss/Gain</strong></td>
+                <td> - </td>
+                <td> <%= @user.weights[1] ? number_to_percentage((((@user.weights[1].weight - @user.weights[0].weight)/@user.weights[0].weight) * 100), precision: 2) : ""  %></td>
+                <td> <%= @user.weights[2] ? number_to_percentage((((@user.weights[2].weight - @user.weights[0].weight)/@user.weights[0].weight) * 100), precision: 2) : ""  %></td>
+                <td> <%= @user.weights[3] ? number_to_percentage((((@user.weights[3].weight - @user.weights[0].weight)/@user.weights[0].weight) * 100), precision: 2) : ""  %></td>
+                <td> <%= @user.weights[4] ? number_to_percentage((((@user.weights[4].weight - @user.weights[0].weight)/@user.weights[0].weight) * 100), precision: 2) : ""  %></td>
+            </tr>
+
+          </tbody>
+        </table>
+      </div>
+
+		</div>
+	</div>
+</div>
+<center>
+<strong>Powered by <a href="http://github.com/sophiabaldonado/betsy" target="_blank">TEAm</a></strong>
+</center>
+<br>
+<br>

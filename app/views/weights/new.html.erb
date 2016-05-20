@@ -1,0 +1,27 @@
+<!-- <h2>Create a New Product</h2> -->
+<% date = ["May 12, 2016", "May 19, 2016", "May 26, 2016",  "June 02, 2016", "June 09, 2016"] %>
+<fieldset>
+	 <% if @user %>
+		<legend> Edit Weight</legend>
+	<% else %>
+		<legend> Input Weight</legend>
+	<% end %>
+
+<%= form_for [@user, @weight], :html => { :class => "form-horizontal", :class => "form" }  do |f| %>
+	<div class="control-group">
+		<%= f.label :'Weight:', :class=>"control-label" %>
+    <%= f.number_field :weight, :class=>"form-control", :class => 'text_field', :step => 'any' %>
+	</div>
+
+	<div class="control-group">
+    <%= f.label :'Weigh-in Date:', :class=>"control-label" %>
+    <%= f.select 'record_date', options_for_select(date) %>
+	</div>
+  <%= f.hidden_field(:user_id, :value => @user.id) %>
+
+	<br>
+	<div >
+		<%= f.submit class: 'btn btn-success'%>
+	</div>
+<% end %>
+</fieldset>
