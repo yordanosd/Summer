@@ -1,0 +1,41 @@
+  <div class="register">
+    <img src="/assets/regester-a-team" width="40%" >
+  </div>
+
+  <div class="reg-pg">
+    <img src="/assets/drake" width="80%" >
+    <div class="reg-center-bg">
+      <div class="reg-center">
+        <%= form_tag("/register-a-team/complete", :method => :post, class: "form-inline") do %>
+          <div class="field">
+            <%= label_tag "Account Manager Email Address" %><br>
+            <%= text_field_tag :email %>
+          </div>
+          <div class="field">
+            <%= label_tag "Team Name" %><br>
+            <%= text_field_tag :email %>
+          </div>
+
+          <div class="field">
+            <%= label_tag "Start Date" %><br>
+            <%= text_field_tag :start_date %>
+          </div>
+          <div class="field">
+            <%= label_tag "End Date" %><br>
+            <%= text_field_tag :end_date %>
+          </div>
+
+          <div class="field">
+            <%= label_tag "Weigh-in Date" %><br>
+            <%= text_field_tag :weigh_in_date %>
+          </div>
+
+          <div class="actions"><br>
+            <%= submit_tag "Submit", class: "btn btn-primary"  %>
+          </div>
+
+        <%end%>
+      </div>
+
+    </div>
+  </div>

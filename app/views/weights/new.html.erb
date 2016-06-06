@@ -2,9 +2,9 @@
 <% date = ["May 12, 2016", "May 19, 2016", "May 26, 2016",  "June 02, 2016", "June 09, 2016"] %>
 <fieldset>
 	 <% if @user %>
-		<legend> Edit Weight</legend>
-	<% else %>
 		<legend> Input Weight</legend>
+	<% else %>
+		<legend> Edit Weight</legend>
 	<% end %>
 
 <%= form_for [@user, @weight], :html => { :class => "form-horizontal", :class => "form" }  do |f| %>

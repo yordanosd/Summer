@@ -1,7 +1,7 @@
 <% if @user %>
   <h1>Signup!</h1>
-
-  <%= form_for @user, :html => { :class => "form-horizontal", :class => "form" } do |f| %>
+<div class="sign-up-form">
+  <%= form_for @user, :html => { :class => "form" } do |f| %>
 
   <!-- ERROR messages-->
 
@@ -21,40 +21,44 @@
   <!-- USER FORM-->
   <div class="control-group">
     <%= f.label :'first_name:', :class=>"control-label" %>
-    <%= f.text_field :first_name, placeholder: "Joe", :class=>"form-control" %>
+    <%= f.text_field :first_name, placeholder: "Homer", :class=>"form-control" %>
   </div>
 
   <div class="control-group">
     <%= f.label :'Username:', :class=>"control-label" %>
-    <%= f.text_field :username, :class=>"form-control" %>
+    <%= f.text_field :username, placeholder: "Donuts",:class=>"form-control" %>
   </div>
 
   <div class="control-group">
     <%= f.label :'email:', :class=>"control-label" %>
-    <%= f.text_field :email, :class=>"form-control" %>
+    <%= f.text_field :email, placeholder: "homer@gmail.com",:class=>"form-control" %>
   </div>
 
   <div class="control-group">
     <%= f.label :'password:', :class=>"control-label" %>
-    <%= f.password_field :password, :class=>"form-control" %>
+    <%= f.password_field :password, placeholder: "password", :class=>"form-control" %>
   </div>
 
   <div class="control-group">
     <%= f.label :'password confirmation:', :class=>"control-label" %>
-    <%= f.password_field :password_confirmation, :class=>"form-control" %>
+    <%= f.password_field :password_confirmation, placeholder: "password", :class=>"form-control" %>
   </div>
 
   <div class="control-group">
     <%= f.label :'Profile Picture:', :class=>"control-label" %>
     <%= f.text_field :photo_url, :class=>"form-control" %>
   </div>
-  <%= f.hidden_field(:photo_url, value: false) %>
 
+  <div class="control-group">
+    <%= f.label :'Team Code:', :class=>"control-label" %>
+    <%= f.text_field :team, placeholder: "01f1b7", :class=>"form-control" %>
+  </div>
 
   <%= f.hidden_field(:account_manager, value: false) %>
-
-  <div class="form-actions">
+  <br>
+  <div class="submit-btn">
     <%= f.submit class:'btn btn-success' %>
   <% end %>
 
 <% end %>
+</div>

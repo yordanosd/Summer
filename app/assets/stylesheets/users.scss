@@ -2,9 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-html{
-  background-image: url("http://static.stereogum.com/uploads/2016/01/f80e7592-640x640.jpg");
-}
+
 .bio
 {
     color: #8A8D94;
@@ -34,10 +32,10 @@ html{
   color: white;
 }
 
-body {
-  background: rgba(105, 106, 113, 0.1);
-
-}
+// body {
+//   background: rgba(105, 106, 113, 0.1);
+//
+// }
 
 /* Table container */
 
@@ -168,7 +166,7 @@ body{
 .profile-userpic-all img {
   float: none;
   margin: 0 auto;
-  width: 100%;
+  width: 26%;
   height: 30%;
   -webkit-border-radius: 10% !important;
   -moz-border-radius: 10% !important;
@@ -185,8 +183,33 @@ body{
   text-align: left;
 }
 
+.sign-up-form{
+  width: 60%;
+  margin-left: 20%;
+  text-align: left;
 
+}
+
+.sign-up-form label{
+  color: black;
+}
+
+.submit-btn{
+  text-align: center;
+}
 .title {
   text-transform: uppercase;
   color: cadetblue;
+}
+
+.table-header{
+  background-color: #023435;
+  color: #EEF3F2;
+  font-family: initial;
+  height: 30px;
+  margin-bottom: 1px;
+  padding-top: 0px;
+  border-top-width: 0px;
+  vertical-align: initial;
+  padding-bottom: 1px;
 }

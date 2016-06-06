@@ -1,0 +1,2 @@
+class TeamCodeMailer < ApplicationMailer
+end

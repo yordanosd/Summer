@@ -12,9 +12,6 @@
 					<div class="profile-usertitle-name">
 						<%= @user.username %>
 					</div>
-          <div class="profile-usertitle-name">
-            <%= @user.first_name %>
-          </div>
 					<div class="profile-usertitle-job">
             <%= @user.email %>
 					</div>
@@ -56,7 +53,7 @@
       <div class="profile-content">
         <h2>Welcome <%= @user.first_name.capitalize %>!</h2>
         <br>
-        <h3>Weign-in Summary</h2>
+        <h3 class="table-header">Weign-in Summary</h3>
         <table class="table table-striped">
           <thead>
             <tr class = "header">
@@ -107,8 +104,6 @@
 		</div>
 	</div>
 </div>
-<center>
-<strong>Powered by <a href="http://github.com/sophiabaldonado/betsy" target="_blank">TEAm</a></strong>
-</center>
+
 <br>
 <br>

@@ -1,18 +1,110 @@
 // Place all the styles related to the home controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.home-pg-background img{
-  text-align: center
-}
-.header-bg img{
-  text-align: center;
-}
 
-.header-bg{
-  text-align: center;
+  .home-pg-background {
+    text-align: center
+  }
+  .header-bg img{
+    text-align: center;
+  }
 
-}
-body{
-  text-align: center;
+  .header-bg{
+    text-align: center;
 
-}
+  }
+  body{
+    text-align: center;
+
+  }
+  img{
+    width: 100%;
+  }
+
+  .home-pg {
+    position: absolute;
+    z-index: 0;
+    text-align: center;
+    width: 100%;
+
+  }
+
+
+  .center {
+    position: absolute;
+    left: 37%;
+    top: 31%;
+    width: 24%;
+    font-size: 18px;
+    opacity: 0.9;
+  }
+
+  .home-pg img {
+    text-align: center;
+    width: 80%;
+  }
+
+  .register  {
+    text-align: left;
+    width: 20%;
+  }
+
+  .reg-center{
+    position: absolute;
+    left: 20%;
+    top: 41%;
+    width: 64%;
+    font-size: 18px;
+    opacity: 0.9;
+    background-color: rgba(150, 46, 94, 0.25);
+    color: black;
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+  }
+
+  .reg-pg{
+    text-align: center;
+    width: 93%;
+    position: absolute;
+    z-index: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .reg-pg label{
+    color: white;
+  }
+
+  .reg-complete-pg{
+    text-align: center;
+    width: 93%;
+    position: absolute;
+    z-index: 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .reg-complete-center {
+      position: absolute;
+      left: 20%;
+      top: -16%;
+      width: 64%;
+      font-size: 18px;
+      /* opacity: 0.9; */
+      background-color: rgb(133, 191, 56);
+      color: #040404;
+      margin-top: 15px;
+      margin-bottom: 25px;
+      font-family: -webkit-pictograph;
+      /* font-size: inherit; */
+      font-weight: bolder;
+  }
+
+  // label{
+  //   color: white;
+  // }
+  // .register  img{
+  //   width: 40%;
+  // }

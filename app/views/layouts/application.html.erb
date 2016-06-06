@@ -10,11 +10,20 @@
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">
   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="build.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
 
 </head>
 <body>
-  <div class="header-bg"><img src="assets/summer16.jpg" class="home-pg-background">
-</div>
+<!-- HEADER *******************************************************-->
+  <!-- <div class="header"> -->
+    <div class="thumbnail" style="  padding-bottom: 0px; margin-bottom: 0px;">
+      <img class="portrait" src="/assets/beach chairs2.jpg" alt="Beach chairs2" style=" width: 100%; height: 443px;">
+    	<!-- <img src="beach chairs" class="img-responsive"> -->
+       </div>
+    <!-- </div> -->
+  <!-- NAV BAR ******************************************************-->
   <nav class="navbar navbar-inverse">
       <div class="container-fluid">
         <div class="navbar-header">
@@ -36,10 +45,14 @@
           </ul>
         <% end %>
       </div>
-    </nav>
-    <article class = "container">
-      <%= yield %>
+    </nav> <!-- END NAV BAR -->
 
-    </article>
+</div> <!-- END HEADER -->
+
+
+<!-- YIELD ******************************************************-->
+    <!-- <article class = "container"> -->
+      <%= yield %>
+    <!-- </article> -->
 </body>
 </html>

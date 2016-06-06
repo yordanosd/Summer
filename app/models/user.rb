@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :weights
-
+  belongs_to :team
+  
   validates :username, presence: true
   validates :email, presence: true, uniqueness: true
 
@@ -27,7 +28,7 @@ class User < ActiveRecord::Base
   end
 
   def ranking
-    
+
   end
 
 end

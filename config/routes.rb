@@ -16,6 +16,10 @@ Rails.application.routes.draw do
     resources :weights, only: [:new, :create]
   end
 
+  get '/register-a-team' => 'home#new_team'
+  post '/register-a-team/complete' => 'home#team_registered'
+  get '/register-a-team/complete' => 'home#team_registered'
+
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
 
