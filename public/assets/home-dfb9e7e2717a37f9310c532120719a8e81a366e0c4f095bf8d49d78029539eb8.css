@@ -1,0 +1,111 @@
+/* line 5, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/home.scss */
+.home-pg-background {
+  text-align: center;
+}
+
+/* line 8, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/home.scss */
+.header-bg img {
+  text-align: center;
+}
+
+/* line 12, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/home.scss */
+.header-bg {
+  text-align: center;
+}
+
+/* line 16, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/home.scss */
+body {
+  text-align: center;
+}
+
+/* line 20, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/home.scss */
+img {
+  width: 100%;
+}
+
+/* line 24, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/home.scss */
+.home-pg {
+  position: absolute;
+  z-index: 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 33, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/home.scss */
+.center {
+  position: absolute;
+  left: 37%;
+  top: 31%;
+  width: 24%;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+/* line 42, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/home.scss */
+.home-pg img {
+  text-align: center;
+  width: 80%;
+}
+
+/* line 47, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/home.scss */
+.register {
+  text-align: left;
+  width: 20%;
+}
+
+/* line 52, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/home.scss */
+.reg-center {
+  position: absolute;
+  left: 20%;
+  top: 41%;
+  width: 64%;
+  font-size: 18px;
+  opacity: 0.9;
+  background-color: rgba(150, 46, 94, 0.25);
+  color: black;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* line 66, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/home.scss */
+.reg-pg {
+  text-align: center;
+  width: 93%;
+  position: absolute;
+  z-index: 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 75, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/home.scss */
+.reg-pg label {
+  color: white;
+}
+
+/* line 79, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/home.scss */
+.reg-complete-pg {
+  text-align: center;
+  width: 93%;
+  position: absolute;
+  z-index: 0;
+  text-align: center;
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* line 89, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/home.scss */
+.reg-complete-center {
+  position: absolute;
+  left: 20%;
+  top: -16%;
+  width: 64%;
+  font-size: 18px;
+  /* opacity: 0.9; */
+  background-color: #85bf38;
+  color: #040404;
+  margin-top: 15px;
+  margin-bottom: 25px;
+  font-family: -webkit-pictograph;
+  /* font-size: inherit; */
+  font-weight: bolder;
+}

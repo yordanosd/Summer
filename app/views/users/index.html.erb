@@ -1,7 +1,4 @@
 
-
- <!-- The classes that can be used are: .active, .success, .info, .warning, and .danger           -->
-
        <% date = ["May-12", "May-19", "May-26",  "June-02", "June-09"] %>
        <div class="profile-content">
          <h3>Weign-in Summary</h2>
@@ -17,12 +14,15 @@
                  <%= date %>
                </th>
                <% end %>
+               <th> TOTAL </th>
+
              </tr>
            </thead>
+           <% count = 1 %>
            <tbody class="table-body">
-             <% @user.each do |user| %>
+             <% @user.sort{|user| user.weights.last && user.weights.first ? (user.weights.last.weight - user.weights.first.weight) : -1 }.each do |user| %>
              <tr>
-              <td class="ranking"> Ranking </td>
+              <td class="ranking"> <%= count %> </td>
                <td class="profile-table-pic">
         					<div class="profile-userpic-all">
         							<img src="<%= user.profile_pic %>" class="media-photo">
@@ -37,7 +37,8 @@
                  <td> <%= user.weights[2] ? number_to_percentage((((user.weights[2].weight - user.weights[0].weight)/user.weights[0].weight) * 100), precision: 2) : ""  %></td>
                  <td> <%= user.weights[3] ? number_to_percentage((((user.weights[3].weight - user.weights[0].weight)/user.weights[0].weight) * 100), precision: 2) : ""  %></td>
                  <td> <%= user.weights[4] ? number_to_percentage((((user.weights[4].weight - user.weights[0].weight)/user.weights[0].weight) * 100), precision: 2) : ""  %></td>
-
+                 <td> <%= user.weights.first && user.weights.last ? number_to_percentage((((user.weights.last.weight - user.weights.first.weight)/user.weights.first.weight) * 100), precision: 2) : ""  %></td>
+                 <% count += 1 %>
              </tr>
              <% end %>
 

@@ -21,6 +21,20 @@ module Summer
     # config.i18n.default_locale = :de
     config.assets.compile = true
      config.assets.digest = true
+     config.serve_static_assets = true
+
+     config.assets.precompile += [
+      'home.css',
+      'sessions.css',
+      'users.css',
+      'weights.css',
+      'application.css'
+
+
+
+
+      ]
+
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true

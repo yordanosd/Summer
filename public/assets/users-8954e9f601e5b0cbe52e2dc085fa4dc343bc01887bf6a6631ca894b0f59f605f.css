@@ -1,0 +1,230 @@
+/* line 6, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.bio {
+  color: #8A8D94;
+  font-size: 14px;
+  position: absolute;
+  font-weight: 400;
+  width: 100%;
+  display: -webkit-inline-box;
+  position: inherit;
+  height: 107px;
+  margin-top: 18px;
+  margin-left: 4px;
+}
+
+/* line 21, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.header {
+  background-color: #055C5F;
+  color: white;
+  text-align: center;
+}
+
+/* line 27, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.table-body {
+  text-align: center;
+}
+
+/* line 30, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.row_header {
+  background-color: rgba(5, 92, 95, 0.66);
+  color: white;
+}
+
+/* Table container */
+/* line 42, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.table-userpic img {
+  width: 20%;
+  height: 2%;
+  margin: 0;
+}
+
+/* line 49, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.userpic img {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+/* line 56, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+body {
+  text-align: center;
+}
+
+/* Profile container */
+/* line 61, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile {
+  margin: 20px 0;
+}
+
+/* Profile sidebar */
+/* line 66, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-sidebar {
+  padding: 20px 0 10px 0;
+  background: rgba(5, 92, 95, 0.13);
+}
+
+/* line 70, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-userpic img {
+  float: none;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  border-radius: 50% !important;
+}
+
+/* line 80, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-usertitle {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* line 85, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-usertitle-name {
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+/* line 92, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-usertitle-job {
+  text-transform: uppercase;
+  color: #5b9bd1;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+/* line 100, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-userbuttons {
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* line 105, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-userbuttons .btn {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 6px 15px;
+  margin-right: 5px;
+}
+
+/* line 113, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-userbuttons .btn:last-child {
+  margin-right: 0px;
+}
+
+/* line 117, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-usermenu {
+  margin-top: 30px;
+}
+
+/* line 121, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-usermenu ul li {
+  border-bottom: 1px solid #f0f4f7;
+  width: 100%;
+  display: block;
+}
+
+/* line 127, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-usermenu ul li:last-child {
+  border-bottom: none;
+}
+
+/* line 131, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-usermenu ul li a {
+  color: #93a3b5;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+/* line 137, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-usermenu ul li a i {
+  margin-right: 8px;
+  font-size: 14px;
+}
+
+/* line 142, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-usermenu ul li a:hover {
+  background-color: #fafcfd;
+  color: #5b9bd1;
+}
+
+/* line 147, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-usermenu ul li.active {
+  border-bottom: none;
+}
+
+/* line 151, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-usermenu ul li.active a {
+  color: #5b9bd1;
+  background-color: #f6f9fb;
+  border-left: 2px solid #5b9bd1;
+  margin-left: -2px;
+}
+
+/* Profile Content */
+/* line 159, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-content {
+  padding: 20px;
+  background: #fff;
+  min-height: 460px;
+  overflow: auto;
+}
+
+/* line 166, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-userpic-all img {
+  float: none;
+  margin: 0 auto;
+  width: 26%;
+  height: 30%;
+  border-radius: 10% !important;
+}
+
+/* line 177, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.profile-table-pic {
+  width: 20%;
+  padding: 0;
+}
+
+/* line 182, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.ranking {
+  text-align: left;
+}
+
+/* line 186, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.sign-up-form {
+  width: 60%;
+  margin-left: 20%;
+  text-align: left;
+}
+
+/* line 193, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.sign-up-form label {
+  color: black;
+}
+
+/* line 197, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.submit-btn {
+  text-align: center;
+}
+
+/* line 200, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.title {
+  text-transform: uppercase;
+  color: cadetblue;
+}
+
+/* line 205, /Users/Yordanos/Ada/C5/projects/Summer/app/assets/stylesheets/users.scss */
+.table-header {
+  background-color: #023435;
+  color: #EEF3F2;
+  font-family: initial;
+  height: 30px;
+  margin-bottom: 1px;
+  padding-top: 0px;
+  border-top-width: 0px;
+  vertical-align: initial;
+  padding-bottom: 1px;
+}

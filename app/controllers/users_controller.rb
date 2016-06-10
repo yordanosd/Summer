@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  skip_before_action :require_login, only: [:new, :create]
+  before_action :correct_user,   only: [:index, :update, :show, :edit, :update]
+
+
   def new
     @user = User.new
   end
@@ -30,6 +35,12 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
   end
+
+  def correct_user
+    @user = User.find(current_user.id)
+    redirect_to(root_path) unless @user == current_user
+  end
+
   private
 
   def user_create_params
